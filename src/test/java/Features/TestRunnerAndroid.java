@@ -6,5 +6,5 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/Features", glue = {"stepDefinitionAndroid"})
-public class testRunnerAndroid {
+public class TestRunnerAndroid {
 }
