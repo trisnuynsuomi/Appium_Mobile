@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 import java.net.URISyntaxException;
 
 public class goToHomePage extends commonPageAndroid {
-    @Test
-    public void verifyGoToHomePageByNext() throws URISyntaxException  {
+    public void verifyGoToHomePageByNext() throws URISyntaxException {
         commonPageAndroid command = new commonPageAndroid();
         command.startAndroidApp();
         command.clickAndroidElementByXpath("//android.widget.Button[@resource-id=\"com.studiobluelime.ecommerceapp:id/btn_next\"]\n");
@@ -17,8 +16,7 @@ public class goToHomePage extends commonPageAndroid {
         command.assertElementText("//android.widget.TextView[@text=\"eCommerce App\"]\n", "eCommerce App");
     }
 
-    @Test
-    public void verifyGoToHomePageBySkip() throws URISyntaxException{
+    public void verifyGoToHomePageBySkip() throws URISyntaxException {
         commonPageAndroid command = new commonPageAndroid();
         command.startAndroidApp();
         command.clickAndroidElementByXpath("//android.widget.Button[@resource-id=\"com.studiobluelime.ecommerceapp:id/btn_skip\"]\n");

@@ -30,17 +30,17 @@ public class commonPageAndroid {
         }
     }
 
-    public void waitForElementToVisible(String xpath){
+    public void waitForElementToVisible(String xpath) {
         FluentWait<AndroidDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(1));
         wait.until(ExpectedConditions.presenceOfElementLocated(AppiumBy.xpath(xpath)));
     }
 
-    public void clickAndroidElementByXpath(String xpath){
+    public void clickAndroidElementByXpath(String xpath) {
         this.waitForElementToVisible(xpath);
         driver.findElement(AppiumBy.xpath(xpath)).click();
     }
 
-    public void assertElementText(String xpath, String content){
+    public void assertElementText(String xpath, String content) {
         this.waitForElementToVisible(xpath);
         var actualString = driver.findElement(AppiumBy.xpath(xpath)).getText();
         Assert.assertEquals(actualString, content);
